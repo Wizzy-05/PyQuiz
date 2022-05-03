@@ -166,6 +166,10 @@ form.form-questions>div.answer-group>* {
 div.score {
   position: absolute;
   display: none;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
   min-width: 100vw;
@@ -195,17 +199,40 @@ div.remove>div.score-modal,
 div.score>div.score-modal {
   position: absolute;
   border-radius: 5px;
-  top: 20%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -20%);
-  background-color: #fff;
+  background-color: #680194;
   box-shadow: 0 0 10px #333;
-  width: 50%;
+  width: 45%;
   height: 50%;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  padding-top: 150px;
+  padding-top: 120px;
+  color: #cdb2d8;
+}
+
+.score-modal svg{
+  width: 25%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color:#cdb2d8 ;
+  opacity: 0.8;
+  z-index: 1;
+  padding: 50px 0px;
+  border-radius: 0 0px 100% 0px;
+}
+
+.score-modal p {
+  margin-top: 55px;
+  font-size: 40px;
+}
+
+
+.score-reveal{
+  font-size: 40px;
 }
 
 @keyframes show {
@@ -225,5 +252,46 @@ div.score>div.score-modal {
 
   100% {
     opacity: 0
+  }
+}
+
+@media screen and (min-width:810px) and (max-width:1000px){
+  div.score>div.score-modal {
+    width: 60%;
+  }
+}
+@media screen and (min-width:250px) and (max-width:810px){
+  div.score {
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+  div.score>div.score-modal {
+    top: 29%;
+    left: 50%;
+    width: 60%;
+    height: 45%;
+    padding-top: 90px;
+  }
+  .score-modal p {
+    font-size: 37px;
+    text-align: center;
+  }
+  .score-modal svg{
+    width: 20%;
+    padding: 48px 0px 48px 0px;
+  }
+} 
+ @media screen and (min-width:250px) and (max-width:549px){
+  .quiz-heading {
+    font-size: 1.4rem;
+  }
+  .score-modal p {
+    font-size: 30px;
+    text-align: center;
+    padding: 10%;
+  }
+  .score-modal svg{
+    width: 40%;
+    padding: 48px 0px 48px 0px;
   }
 }

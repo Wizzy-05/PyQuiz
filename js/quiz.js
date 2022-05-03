@@ -22,10 +22,10 @@ const Questions = [{
 }, {
   title:' Which operator has higher precedence in the following list',
   answers:['% (Modulus)', ' & (BitWise AND)', '** (Exponent)',' > (Comparison)'], 
-  value:'D'
+  value:'A'
 }, {
   title:'What is a correct syntax to output "Hello World" in Python?',
-  answers:['Print("Hello World")','echo("Hello World");','echo "Hello World"','p("Hello World")'],
+  answers:['print("Hello World")','echo("Hello World");','echo "Hello World"','p("Hello World")'],
   value:'A'
 }, {
   title:'How do you insert COMMENTS in python code?',
@@ -122,7 +122,7 @@ const Questions = [{
 }];
 
 
-const correctAnswers = ['A'].concat(Questions.map(item => item.value));
+const correctAnswers = ['C'].concat(Questions.map(item => item.value));
 const userAnswers = [];
 const WRAPPER = document.querySelector('.quiz-content');
 const quizGroup = WRAPPER.querySelector('.quiz-group');
@@ -192,7 +192,7 @@ NEXT.addEventListener('click', e => {
     divScore.classList.remove('remove');
 
     divScore.style.cssText = 'display: flex;'
-    console.log(localStorage.getItem('result'))
+    console.log(localStorage.getItem('result'));
     SCORETEXT.textContent = Math.round((localStorage.getItem('result') / Questions.length) * 100);
   }
 
